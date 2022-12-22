@@ -59,6 +59,7 @@ svg {
 	font-weight: 400;
 	line-height: 0.8;
 	font-size: 1.6rem;
+	cursor: pointer;
 	&:hover {
 		background-color: var(--color-red);
 		color: white;
@@ -67,15 +68,23 @@ svg {
 		color: var(--color-red);
 		border-radius: 5px;
 		border: 1px solid var(--color-red);
-		padding: 1.2rem 4rem;
+		padding: 1.2rem 0;
 		font-size: 2rem;
 		line-height: 26px;
 		font-family: var(--inika);
 		text-transform: capitalize;
 		min-width: 16.1rem;
+		text-align: center;
+		cursor: pointer;
 		&.active {
 			background-color: var(--color-red);
 			color: white;
+		}
+		&-secondary--small {
+			font-weight: 700;
+			font-size: 10px;
+			line-height: 13px;
+			color: var(--grey-light);
 		}
 	}
 }
@@ -92,6 +101,13 @@ svg {
 	&--1 {
 		font-size: 4.5rem;
 		line-height: 1.1;
+	}
+	&--2 {
+		font-weight: 700;
+		font-size: 40px;
+		line-height: 50px;
+		font-family: var(--inter);
+		text-align: right;
 	}
 	&--inika {
 		font-family: var(--inika);
@@ -276,7 +292,7 @@ svg {
 }
 
 .prices {
-	padding-block: 4rem;
+	padding-block: 4rem 11.3rem;
 	display: flex;
 	justify-content: space-between;
 	&__title {
@@ -304,14 +320,51 @@ svg {
 	}
 	&__feedback {
 		flex: 1;
+		max-width: 45.2rem;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		&-img {
+			width: 15.2rem;
+			height: 17.5rem;
+		}
+	}
+	&__heading {
+		margin-bottom: 3.8rem;
+	}
+	&__btn {
+		margin-bottom: 3.9rem;
+		text-transform: none;
+		background-color: transparent;
+		&:hover {
+			background-color: var(--color-red);
+			color: white;
+		}
 	}
 }
 .dropdown {
 	width: 100%;
 	overflow: hidden;
 	border-radius: 2rem;
-	background-color: var(--bg);
 	transition: background 0.3s;
+	&.active &__content {
+		display: block;
+		transform-origin: left top;
+		animation: dropdown-fadein 0.6s forwards;
+	}
+	&.hide &__content {
+		display: none;
+	}
+	&.active &__btn span {
+		background: #aea1a1;
+		color: white;
+		transition: transform 0.6s, color 0.6s;
+		transform: rotate(180deg);
+	}
+	&.active &__btn {
+		background: #d6e7d2;
+	}
+
 	&__btn {
 		width: 100%;
 		padding: 1.6rem 4rem;
@@ -322,8 +375,8 @@ svg {
 		font-size: 20px;
 		line-height: 20px;
 		align-items: center;
+		background-color: var(--bg);
 		color: #000000;
-		background-color: transparent;
 		border: none;
 		cursor: pointer;
 		span {
@@ -335,16 +388,21 @@ svg {
 			justify-content: center;
 			background-color: #d9d9d9;
 			transition: background 0.3s;
+			color: #717171;
+
 			svg {
 				margin-bottom: -1px;
 				width: 9px;
 				height: 9px;
+				stroke: currentColor;
 			}
 		}
 	}
 	&__content {
 		padding: 0 4rem 1.2rem;
 		background: #d6e7d2;
+		border-radius: 0 0 2rem 2rem;
+		transform: scaleY(0);
 		display: none;
 	}
 	&__text {
@@ -379,5 +437,157 @@ svg {
 		border-radius: 1rem;
 		color: var(--grey-light);
 		border: 1px solid transparent;
+	}
+}
+.contacts {
+	overflow: hidden;
+	padding-top: 6rem;
+	height: 55rem;
+	background-color: var(--bg);
+	background-image: url(../assets/contact_woman.png);
+	background-repeat: no-repeat;
+	background-position: bottom left 110px;
+	&__heading {
+		text-align: center;
+		font-family: var(--inika);
+		font-style: normal;
+		font-weight: 700;
+		font-size: 4rem;
+		line-height: 52px;
+		color: var(--color-green);
+		margin-bottom: 3.7rem;
+	}
+}
+.ml {
+	margin-left: auto;
+}
+.mb {
+	margin-bottom: 4.7rem;
+}
+.custom-select {
+	--height: 0;
+	max-width: 45rem;
+	background: #d6e7d2;
+	transition: background 0.3s, box-shadow 0.3s;
+	position: relative;
+	z-index: 0;
+	&::after {
+		content: '';
+		position: absolute;
+		width: calc(100% - 4px);
+		height: 4px;
+		left: 2px;
+		bottom: 0;
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+		transition: box-shadow 0.3s;
+		z-index: -1;
+	}
+	&.active {
+		box-shadow: none;
+		&::after {
+			box-shadow: none;
+		}
+	}
+	&.active &__options {
+		height: var(--height);
+	}
+	&.active &__label {
+		background: #c1e698;
+		&-icon {
+			transform: rotate(180deg);
+		}
+	}
+	&__label {
+		padding: 5px 3.5rem 3px 2.1rem;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		cursor: pointer;
+		transition: background 0.3s;
+		&-text {
+			font-weight: 400;
+			font-size: 2rem;
+			line-height: 2;
+			letter-spacing: 0.05em;
+
+			color: var(--grey-light);
+		}
+		&-icon {
+			width: 1.6rem;
+			height: 1.6rem;
+
+			background-color: #aea1a1;
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			transition: transform 0.3s;
+			svg {
+				width: 11px;
+				aspect-ratio: 1;
+				stroke: white;
+			}
+		}
+	}
+	&__options {
+		height: 0;
+		transition: height 0.3s;
+		overflow: hidden;
+	}
+	&__list {
+		padding: 2.7rem 3.5rem 3.1rem;
+		padding-left: 4.1rem;
+	}
+	&__option {
+		width: 100%;
+		font-size: 16px;
+		line-height: 40px;
+		letter-spacing: 0.05em;
+		color: var(--color-green);
+		border-bottom: 0.5px solid transparent;
+		cursor: pointer;
+		transition: border 0.3s, color 0.3s;
+		&:not(:last-child) {
+			margin-bottom: 1.2rem;
+		}
+		&:hover {
+			border-bottom: 0.5px solid var(--grey-light);
+			color: var(--grey-light);
+		}
+	}
+}
+.address {
+	width: 44.8rem;
+	border: 1px solid #000000;
+	border-radius: 20px;
+	padding: 1.7rem 3.3rem 3.2rem;
+	p {
+		display: flex;
+		align-items: center;
+	}
+	.field {
+		font-size: 16px;
+		line-height: 40px;
+		letter-spacing: 0.05em;
+		color: #000000;
+		min-width: 12.8rem;
+	}
+	.value {
+		font-size: 16px;
+		line-height: 40px;
+		letter-spacing: 0.05em;
+		color: var(--grey-light);
+	}
+	&__call {
+		margin-top: 2.4rem;
+		text-align: center;
+	}
+}
+@keyframes dropdown-fadein {
+	from {
+		transform: scaleY(0);
+	}
+	to {
+		transform: scaleY(1);
 	}
 }
