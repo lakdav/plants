@@ -47,7 +47,7 @@ svg {
   display: block;
   width: 100%;
   height: auto;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 .padding-inline {
@@ -281,6 +281,114 @@ svg {
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 20px;
+}
+
+.prices {
+  padding-block: 4rem;
+  display: flex;
+  justify-content: space-between;
+}
+.prices__title {
+  font-weight: 700;
+  font-size: 4rem;
+  line-height: 48px;
+  color: #000000;
+  margin-bottom: 6rem;
+}
+.prices__content {
+  flex: 1;
+}
+.prices__list {
+  flex: 1 0 33.2rem;
+  max-width: 33.2rem;
+  padding: 34px 41px;
+  border: 1px solid #e3e1d5;
+  border-radius: 20px;
+}
+.prices__item {
+  max-width: 25.5rem;
+}
+.prices__item:not(:last-child) {
+  margin-bottom: 2.85rem;
+}
+.prices__feedback {
+  flex: 1;
+}
+
+.dropdown {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 2rem;
+  background-color: var(--bg);
+  transition: background 0.3s;
+}
+.dropdown__btn {
+  width: 100%;
+  padding: 1.6rem 4rem;
+  padding-left: 3.9rem;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+  align-items: center;
+  color: #000000;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.dropdown__btn span {
+  width: 1.6rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #d9d9d9;
+  transition: background 0.3s;
+}
+.dropdown__btn span svg {
+  margin-bottom: -1px;
+  width: 9px;
+  height: 9px;
+}
+.dropdown__content {
+  padding: 0 4rem 1.2rem;
+  background: #d6e7d2;
+  display: none;
+}
+.dropdown__text {
+  padding-top: 0.6rem;
+  border-top: 0.5px solid #aea1a1;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1rem;
+  color: var(--grey-light);
+  margin-bottom: 0.6rem;
+}
+.dropdown__price {
+  display: flex;
+  align-items: flex-end;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  color: black;
+  margin-bottom: 1.2rem;
+}
+.dropdown__price-mark {
+  color: var(--color-red);
+  font-weight: 700;
+}
+.dropdown__price-mark span {
+  font-size: 1.6rem;
+  line-height: 20px;
+}
+.dropdown__order {
+  background-color: #fff;
+  padding: 3px 20px;
+  border-radius: 1rem;
+  color: var(--grey-light);
+  border: 1px solid transparent;
 }
 
 /*# sourceMappingURL=style.css.map */
