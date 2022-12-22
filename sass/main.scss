@@ -596,6 +596,12 @@ svg {
 	font-weight: 400;
 	font-size: 20px;
 	line-height: 50px;
+	a {
+		transition: color 0.3s;
+		&:hover {
+			color: var(--color-red);
+		}
+	}
 }
 .social {
 	display: flex;

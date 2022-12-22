@@ -1,4 +1,4 @@
-const dropdownList = document.querySelectorAll('#dropdown');
+const dropdownList = document.querySelectorAll('.dropdown');
 
 let currentdropdownItem = null;
 

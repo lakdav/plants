@@ -7,11 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
     <link
         href="https://fonts.googleapis.com/css2?family=Inika:wght@400;700&family=Inter:wght@300;400;600;700&family=Roboto&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
-    <title>Document</title>
+    <title>Plants</title>
 </head>
 
 <body>
@@ -46,9 +47,9 @@
         <section id="about" class="about flex-block flex-block--reverse">
             <div class="about__image"><img src="./assets/houseplant.png" alt="leafs"></div>
             <div class="about__content">
-                <h1 class="heading heading--inika">We are <span class="heading__mark heading__mark--red">professional
+                <h2 class="heading heading--inika">We are <span class="heading__mark heading__mark--red">professional
                         experienced</span> gardeners
-                </h1>
+                </h2>
                 <div class="about__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                     Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
                     printer took a galley of type and scrambled it to make a type specimen book. It has survived not
@@ -107,7 +108,7 @@
             <div class="prices__content">
                 <h2 class="prices__title">Prices</h2>
                 <ul class="prices__list">
-                    <li id="dropdown" class="prices__item dropdown"><button class="dropdown__btn">Basics<span><svg>
+                    <li class="prices__item dropdown"><button class="dropdown__btn">Basics<span><svg>
                                     <use xlink:href="./assets/arrow.svg#arrow" />
                                 </svg></span></button>
                         <div class="dropdown__content">
@@ -119,7 +120,7 @@
                             <button class="dropdown__order">Order</button>
                         </div>
                     </li>
-                    <li id="dropdown" class="prices__item dropdown"><button class="dropdown__btn">Standard<span><svg>
+                    <li class="prices__item dropdown"><button class="dropdown__btn">Standard<span><svg>
                                     <use xlink:href="./assets/arrow.svg#arrow" />
                                 </svg></span></button>
                         <div class="dropdown__content">
@@ -131,7 +132,7 @@
                             <button class="dropdown__order">Order</button>
                         </div>
                     </li>
-                    <li id="dropdown" class="prices__item dropdown"><button class="dropdown__btn">Pro care<span><svg>
+                    <li class="prices__item dropdown"><button class="dropdown__btn">Pro care<span><svg>
                                     <use xlink:href="./assets/arrow.svg#arrow" />
                                 </svg></span></button>
                         <div class="dropdown__content">
@@ -146,9 +147,9 @@
                 </ul>
             </div>
             <div class="prices__feedback">
-                <h2 class="prices__heading heading heading--2">Our best <span class="heading__mark">gardeners</span> are
+                <h3 class="prices__heading heading heading--2">Our best <span class="heading__mark">gardeners</span> are
                     ready to help
-                    you</h2>
+                    you</h3>
                 <button class="prices__btn btn-secondary">Contact us</button>
                 <div class="prices__feedback-img">
                     <img src="./assets/leafs-small.png" alt="">
@@ -163,16 +164,16 @@
                             <use xlink:href="./assets/arrow.svg#arrow" />
                         </svg></span>
                 </div>
-                <div id="custom-select-options" class="custom-select__options">
-                    <ul class="custom-select__list">
-                        <li class="custom-select__option" data-city="Yonkers, NY" data-phone="+1 914 678 0003"
-                            data-officeadress="511 Warburton Ave">Yonkers, NY</li>
-                        <li class="custom-select__option" data-city="Canandaigua, NY" data-phone="+1 585 393 0001"
-                            data-officeadress="151 Charlotte Street">Canandaigua, NY</li>
-                        <li class="custom-select__option" data-city="Sherrill, NY" data-phone="+1 315 908 0004"
-                            data-officeadress="14 WEST Noyes BLVD">Sherrill, NY</li>
-                        <li class="custom-select__option" data-city="New York City" data-phone="+1 212 456 0002"
-                            data-officeadress="9 East 91st Street">New York City</li>
+                <div tabindex="0" id="custom-select-options" class="custom-select__options">
+                    <ul tabindex="0" class="custom-select__list">
+                        <li tabindex="0" class="custom-select__option" data-city="Yonkers, NY"
+                            data-phone="+1 914 678 0003" data-officeadress="511 Warburton Ave">Yonkers, NY</li>
+                        <li tabindex="0" class="custom-select__option" data-city="Canandaigua, NY"
+                            data-phone="+1 585 393 0001" data-officeadress="151 Charlotte Street">Canandaigua, NY</li>
+                        <li tabindex="0" class="custom-select__option" data-city="Sherrill, NY"
+                            data-phone="+1 315 908 0004" data-officeadress="14 WEST Noyes BLVD">Sherrill, NY</li>
+                        <li tabindex="0" class="custom-select__option" data-city="New York City"
+                            data-phone="+1 212 456 0002" data-officeadress="9 East 91st Street">New York City</li>
                     </ul>
                 </div>
             </div>
@@ -180,13 +181,14 @@
         </section>
     </main>
     <footer class="footer">
-        <div class="copyright"><span>&copy;</span><span>2022</span><a href="">github</a></div>
-        <a href="">Rolling Scopes School</a>
+        <div class="copyright"><span>&copy;</span><span>2022</span><a href="https://github.com/lakdav"
+                target="_parent">github</a></div>
+        <a href="https://rs.school/js-stage0/" target="_blank">Rolling Scopes School</a>
         <ul class="social">
-            <li><a href="#!"><img src="./assets/inst.svg" alt=""></a></li>
-            <li><a href="#!"><img src="./assets/fb.svg" alt=""></a></li>
-            <li><a href="#!"><img src="./assets/tw.svg" alt=""></a></li>
-            <li><a href="#!"><img src="./assets/pinterest.svg" alt=""></a></li>
+            <li><a href="#!"><img src="./assets/inst.svg" alt="inst"></a></li>
+            <li><a href="#!"><img src="./assets/fb.svg" alt="facebook"></a></li>
+            <li><a href="#!"><img src="./assets/tw.svg" alt="" twitter></a></li>
+            <li><a href="#!"><img src="./assets/pinterest.svg" alt="pinterest"></a></li>
         </ul>
     </footer>
     <script src="./js/index.js"></script>

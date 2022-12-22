@@ -608,6 +608,12 @@ svg {
   font-size: 20px;
   line-height: 50px;
 }
+.footer a {
+  transition: color 0.3s;
+}
+.footer a:hover {
+  color: var(--color-red);
+}
 
 .social {
   display: flex;
