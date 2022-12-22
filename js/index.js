@@ -58,3 +58,28 @@ options.forEach((option) => {
     </div>`;
 	});
 });
+
+const filterButtons = document.querySelectorAll('.services__filter-item .btn');
+const services = document.querySelectorAll('.service');
+
+let currentButton = null;
+
+filterButtons.forEach((btn) => {
+	btn.addEventListener('click', () => {
+		if (currentButton === btn) {
+			return;
+		}
+		if (currentButton) {
+			currentButton.classList.remove('active');
+		}
+		btn.classList.add('active');
+		services.forEach((service) => {
+			if (service.dataset.tag === btn.dataset.target) {
+				service.classList.remove('blur');
+			} else {
+				service.classList.add('blur');
+			}
+		});
+		currentButton = btn;
+	});
+});

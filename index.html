@@ -60,40 +60,43 @@
             <div class="services__header">
                 <h2 class="services__title">Service and our projects</h2>
                 <ul class="services__filter">
-                    <li class="services__filter-item"><button class="btn btn-secondary active">Gardens</button></li>
-                    <li class="services__filter-item"><button class="btn btn-secondary">Lawn</button></li>
-                    <li class="services__filter-item"><button class="btn btn-secondary">Planting</button></li>
+                    <li class="services__filter-item"><button data-target="garden"
+                            class="btn btn-secondary">Gardens</button></li>
+                    <li class="services__filter-item"><button data-target="lawn" class="btn btn-secondary">Lawn</button>
+                    </li>
+                    <li class="services__filter-item"><button data-target="planting"
+                            class="btn btn-secondary">Planting</button></li>
                 </ul>
 
             </div>
             <div class="services__content">
-                <article class="service">
+                <article data-tag="garden" class="service">
                     <div class="service__image"><img src="./assets/service_item.png" alt="Garden care"></div>
                     <h3 class="service__title">Garden care</h3>
                     <p class="servive__text">Lorem Ipsum has been the industry</p>
                 </article>
-                <article class="service">
+                <article data-tag="planting" class="service">
                     <div class="service__image"><img src="./assets/service_item-1.png" alt="Garden care"></div>
                     <h3 class="service__title">Planting</h3>
                     <p class="servive__text">Lorem Ipsum has been the industry</p>
                 </article>
-                <article class="service">
+                <article data-tag="lawn" class="service">
                     <div class="service__image"><img src="./assets/service_item-2.png" alt="Garden care"></div>
                     <h3 class="service__title">Lawn care</h3>
                     <p class="servive__text">Lorem Ipsum has been the industry</p>
                 </article>
-                <article class="service">
+                <article data-tag="planting" class="service">
                     <div class="service__image"><img src="./assets/service_item-3.png" alt="Garden care"></div>
                     <h3 class="service__title">Planting</h3>
                     <p class="servive__text">Lorem Ipsum has been the industry</p>
                 </article>
-                <article class="service">
+                <article data-tag="garden" class="service">
                     <div class="service__image"><img src="./assets/service_item-4.png" alt="Garden care"></div>
                     <h3 class="service__title">Garden care</h3>
                     <p class="servive__text">Lorem Ipsum has been the industry</p>
                 </article>
 
-                <article class="service">
+                <article data-tag="planting" class="service">
                     <div class="service__image"><img src="./assets/first.png" alt="Garden care"></div>
                     <h3 class="service__title">Planting</h3>
                     <p class="servive__text">Lorem Ipsum has been the industry</p>
@@ -164,9 +167,9 @@
                     <ul class="custom-select__list">
                         <li class="custom-select__option" data-city="Yonkers, NY" data-phone="+1 914 678 0003"
                             data-officeadress="511 Warburton Ave">Yonkers, NY</li>
-                        <li class="custom-select__option" data-city="Canandaigua, NY" data-phone="+1	585	393 0001"
+                        <li class="custom-select__option" data-city="Canandaigua, NY" data-phone="+1 585 393 0001"
                             data-officeadress="151 Charlotte Street">Canandaigua, NY</li>
-                        <li class="custom-select__option" data-city="Sherrill, NY" data="+1	315	908 0004"
+                        <li class="custom-select__option" data-city="Sherrill, NY" data-phone="+1 315 908 0004"
                             data-officeadress="14 WEST Noyes BLVD">Sherrill, NY</li>
                         <li class="custom-select__option" data-city="New York City" data-phone="+1 212 456 0002"
                             data-officeadress="9 East 91st Street">New York City</li>
@@ -176,7 +179,16 @@
             <div id="address-output"></div>
         </section>
     </main>
-    <footer class="footer"></footer>
+    <footer class="footer">
+        <div class="copyright"><span>&copy;</span><span>2022</span><a href="">github</a></div>
+        <a href="">Rolling Scopes School</a>
+        <ul class="social">
+            <li><a href="#!"><img src="./assets/inst.svg" alt=""></a></li>
+            <li><a href="#!"><img src="./assets/fb.svg" alt=""></a></li>
+            <li><a href="#!"><img src="./assets/tw.svg" alt=""></a></li>
+            <li><a href="#!"><img src="./assets/pinterest.svg" alt=""></a></li>
+        </ul>
+    </footer>
     <script src="./js/index.js"></script>
 </body>
 

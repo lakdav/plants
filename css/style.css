@@ -282,6 +282,10 @@ svg {
   border: 1px solid #e3e1d5;
   border-radius: 0px 0px 20px 20px;
   overflow: hidden;
+  transition: filter 0.3s;
+}
+.service.blur {
+  filter: blur(2px);
 }
 .service__image {
   margin-bottom: 1.2rem;
@@ -592,6 +596,28 @@ svg {
 .address__call {
   margin-top: 2.4rem;
   text-align: center;
+}
+
+.footer {
+  padding-inline: 11rem 11rem;
+  display: flex;
+  justify-content: space-between;
+  min-height: 13rem;
+  align-items: center;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 50px;
+}
+
+.social {
+  display: flex;
+  gap: 2rem;
+}
+
+.copyright {
+  display: flex;
+  gap: 2rem;
+  margin-right: 2.1rem;
 }
 
 @keyframes dropdown-fadein {
