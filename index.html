@@ -72,7 +72,7 @@
             </div>
             <div class="services__content">
                 <article data-tag="garden" class="service">
-                    <div class="service__image"><img src="./assets/service_item.png" alt="Garden care"></div>
+                    <div class="service__image"><img src="./assets/first.png" alt="Garden care"></div>
                     <h3 class="service__title">Garden care</h3>
                     <p class="servive__text">Lorem Ipsum has been the industry</p>
                 </article>
@@ -98,7 +98,7 @@
                 </article>
 
                 <article data-tag="planting" class="service">
-                    <div class="service__image"><img src="./assets/first.png" alt="Garden care"></div>
+                    <div class="service__image"><img src="./assets/service_item.png" alt="Garden care"></div>
                     <h3 class="service__title">Planting</h3>
                     <p class="servive__text">Lorem Ipsum has been the industry</p>
                 </article>
@@ -157,27 +157,31 @@
             </div>
         </section>
         <section id="contacts" class="contacts">
-            <h2 class="contacts__heading">Contact us</h2>
-            <div id="custom-select" class="custom-select ml mb">
-                <div id="custom-select-toggle" class="custom-select__label">
-                    <span class="custom-select__label-text">City</span><span class="custom-select__label-icon"><svg>
-                            <use xlink:href="./assets/arrow.svg#arrow" />
-                        </svg></span>
+            <div class="contacts__wrapper">
+                <h2 class="contacts__heading">Contact us</h2>
+                <div id="custom-select" class="custom-select ml mb">
+                    <div id="custom-select-toggle" class="custom-select__label">
+                        <span class="custom-select__label-text">City</span><span class="custom-select__label-icon"><svg>
+                                <use xlink:href="./assets/arrow.svg#arrow" />
+                            </svg></span>
+                    </div>
+                    <div tabindex="0" id="custom-select-options" class="custom-select__options">
+                        <ul tabindex="0" class="custom-select__list">
+                            <li tabindex="0" class="custom-select__option" data-city="Yonkers, NY"
+                                data-phone="+1 914 678 0003" data-officeadress="511 Warburton Ave">Yonkers, NY</li>
+                            <li tabindex="0" class="custom-select__option" data-city="Canandaigua, NY"
+                                data-phone="+1 585 393 0001" data-officeadress="151 Charlotte Street">Canandaigua, NY
+                            </li>
+                            <li tabindex="0" class="custom-select__option" data-city="Sherrill, NY"
+                                data-phone="+1 315 908 0004" data-officeadress="14 WEST Noyes BLVD">Sherrill, NY</li>
+                            <li tabindex="0" class="custom-select__option" data-city="New York City"
+                                data-phone="+1 212 456 0002" data-officeadress="9 East 91st Street">New York City</li>
+                        </ul>
+                    </div>
                 </div>
-                <div tabindex="0" id="custom-select-options" class="custom-select__options">
-                    <ul tabindex="0" class="custom-select__list">
-                        <li tabindex="0" class="custom-select__option" data-city="Yonkers, NY"
-                            data-phone="+1 914 678 0003" data-officeadress="511 Warburton Ave">Yonkers, NY</li>
-                        <li tabindex="0" class="custom-select__option" data-city="Canandaigua, NY"
-                            data-phone="+1 585 393 0001" data-officeadress="151 Charlotte Street">Canandaigua, NY</li>
-                        <li tabindex="0" class="custom-select__option" data-city="Sherrill, NY"
-                            data-phone="+1 315 908 0004" data-officeadress="14 WEST Noyes BLVD">Sherrill, NY</li>
-                        <li tabindex="0" class="custom-select__option" data-city="New York City"
-                            data-phone="+1 212 456 0002" data-officeadress="9 East 91st Street">New York City</li>
-                    </ul>
-                </div>
+                <div id="address-output"></div>
             </div>
-            <div id="address-output"></div>
+
         </section>
     </main>
     <footer class="footer">

@@ -118,11 +118,10 @@ svg {
 }
 
 .header,
-.footer,
 .main {
 	max-width: 1440px;
-	margin-inline: auto;
 	display: grid;
+	margin-inline: auto;
 	grid-template-columns: auto minmax(min-content, 1220px) auto;
 	grid-auto-rows: auto;
 	& > * {
@@ -135,7 +134,12 @@ svg {
 		padding-inline: calc((100% - 1220px) / 2);
 	}
 }
+.container {
+	width: min(1220px, 100% - 5vw);
+	margin-inline: auto;
+}
 .header {
+	background-color: var(--bg);
 	&__wrapper {
 		min-height: 13.4rem;
 		display: flex;
@@ -268,7 +272,6 @@ svg {
 	}
 }
 .service {
-	// max-width: 32.9rem;
 	text-align: center;
 	padding-bottom: 3.5rem;
 	border: 1px solid #e3e1d5;
@@ -444,13 +447,16 @@ svg {
 	}
 }
 .contacts {
-	overflow: hidden;
-	padding-top: 6rem;
-	height: 55rem;
 	background-color: var(--bg);
-	background-image: url(../assets/contact_woman.png);
-	background-repeat: no-repeat;
-	background-position: bottom left 110px;
+	&__wrapper {
+		overflow: hidden;
+		padding-top: 6rem;
+		height: 55rem;
+		background-image: url(../assets/contact_woman.png);
+		background-repeat: no-repeat;
+		background-position: bottom left;
+	}
+
 	&__heading {
 		text-align: center;
 		font-family: var(--inika);
@@ -588,7 +594,7 @@ svg {
 	}
 }
 .footer {
-	padding-inline: 11rem 11rem;
+	padding-inline: calc((100% - 1220px) / 2);
 	display: flex;
 	justify-content: space-between;
 	min-height: 13rem;
