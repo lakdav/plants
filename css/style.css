@@ -104,12 +104,6 @@ body {
   font-family: var(--inter);
 }
 
-@media screen and (min-width: 767px) {
-  [ismobile] {
-    display: none;
-  }
-}
-
 .btn-secondary:hover, .btn-primary:hover {
   background-color: var(--color-red);
   color: white;
@@ -339,7 +333,7 @@ body {
   .welcome__layout {
     padding-block: 4rem 7rem;
     justify-content: flex-start;
-    background-image: url(../../assets/leafs.png);
+    background-image: url(../assets/leafs.png);
     background-repeat: no-repeat;
     background-position: -10px center;
   }
@@ -577,7 +571,7 @@ body {
     grid-template-columns: max-content max-content;
     justify-items: start;
     justify-content: space-between;
-    background-image: url(../../assets/leafs-small.png);
+    background-image: url(../assets/leafs-small.png);
     background-repeat: no-repeat;
     background-position: right -9px top 109px;
   }
