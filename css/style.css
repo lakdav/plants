@@ -311,6 +311,11 @@ body {
 .burger svg:hover line {
   stroke-width: 2;
 }
+@media screen and (min-width: 767px) {
+  .burger {
+    display: none;
+  }
+}
 
 .welcome {
   background-color: var(--bg);
@@ -342,7 +347,7 @@ body {
     max-width: 34.1rem;
   }
 }
-@media screen and (min-width: 1390px) {
+@media screen and (min-width: 1439px) {
   .welcome__layout {
     padding-block: 9.8rem 9.4rem;
     justify-content: flex-end;
@@ -378,7 +383,7 @@ body {
     margin-bottom: 3.7rem;
   }
 }
-@media screen and (min-width: 1390px) {
+@media screen and (min-width: 1439px) {
   .about__layout {
     padding-block: 9.3rem 9.4rem;
     grid-template-columns: 1fr auto;
@@ -507,10 +512,12 @@ body {
 }
 
 .prices {
-  --padding-block: 2.5rem 4rem;
+  --padding-block: 2.5rem 0;
   --title-mb: 4rem;
   --feadback-gap: 1.4rem;
   --accourdions-gap: 1.39rem;
+  --height: 38.4rem;
+  min-height: var(--height);
 }
 .prices__layout {
   padding-block: var(--padding-block);
@@ -559,9 +566,10 @@ body {
 @media screen and (min-width: 767px) {
   .prices {
     --title-mb: 5rem;
-    --padding-block: 4rem 19.8rem;
+    --padding-block: 4rem 0;
     --feadback-gap: 2.15rem;
     --accourdions-gap: 3.15rem;
+    --height: 76.8rem;
   }
   .prices__layout {
     padding-block: var(--padding-block);
@@ -589,6 +597,12 @@ body {
   }
 }
 @media screen and (min-width: 1200px) {
+  .prices {
+    --height: 56rem;
+    --title-mb: 6rem;
+    --padding-block: 4rem 0;
+    --feadback-gap: 3.3rem;
+  }
   .prices__layout {
     background-position: right -9px top 264px;
   }
@@ -604,16 +618,6 @@ body {
   }
   .prices__accourdion {
     min-width: 25rem;
-  }
-}
-@media screen and (min-width: 1390px) {
-  .prices {
-    --title-mb: 6rem;
-    --padding-block: 4rem 12.9rem;
-    --feadback-gap: 3.3rem;
-  }
-  .prices__heading {
-    font-size: 4rem;
   }
 }
 
