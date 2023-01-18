@@ -15,11 +15,14 @@
 	padding-inline: calc((100% - 1220px) / 2);
 	display: flex;
 	justify-content: space-between;
+	flex-direction: column;
 	min-height: 13rem;
 	align-items: center;
 	font-weight: 400;
 	font-size: 20px;
-	line-height: 50px;
+	line-height: 25px;
+	padding-top: 22px;
+
 	a {
 		transition: color 0.3s;
 		&:hover {
@@ -30,11 +33,28 @@
 .social {
 	display: flex;
 	gap: 2rem;
+	li {
+		transition: transform 0.3s;
+		&:hover {
+			transform: scale(1.1);
+		}
+	}
 }
 .copyright {
 	display: flex;
-	gap: 2rem;
-	margin-right: 2.1rem;
+	gap: 2.25rem;
+	margin-right: 0.5rem;
+}
+@media screen and (min-width: 1440px) {
+	.footer {
+		flex-direction: row;
+		padding-top: 0;
+	}
+	.copyright {
+		display: flex;
+		gap: 2rem;
+		margin-right: 2.1rem;
+	}
 }
 @keyframes dropdown-fadein {
 	from {

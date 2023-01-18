@@ -14,7 +14,6 @@ view.burger.addEventListener('click', () => {
 
 	view.showNavigation = !view.showNavigation;
 	document.body.style.overflow = view.showNavigation ? 'hidden' : '';
-	document.documentElement.style.marginRight = view.showNavigation ? '1.5rem' : '';
 	view.burger.setAttribute('aria-expanded', view.showNavigation);
 });
 
