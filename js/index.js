@@ -9,7 +9,7 @@ view.burger.addEventListener('click', () => {
 	view.navigation.classList.toggle('active');
 	view.navigation.style.setProperty(
 		'--height',
-		view.showNavigation ? 0 : view.navigation.firstElementChild.clientHeight + 'px',
+		view.showNavigation ? '0px' : view.navigation.firstElementChild.clientHeight + 'px',
 	);
 
 	view.showNavigation = !view.showNavigation;

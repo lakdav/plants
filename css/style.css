@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   --color-green: #499a18;
   --color-red: #e06733;
@@ -236,7 +237,7 @@ body {
 }
 
 .nav {
-  --height: 0;
+  --height: 0px;
   position: absolute;
   left: 0;
   top: 100%;
@@ -244,7 +245,7 @@ body {
   margin-left: 50%;
   transform: translateX(-50%);
   height: var(--height);
-  transition: height 0.1s ease-in-out;
+  transition: height 0.3s 0.2s ease-in-out, box-shadow 0.3s 0s;
   overflow: hidden;
 }
 .nav__list {
@@ -253,6 +254,7 @@ body {
   align-items: center;
   gap: 2rem 4.7rem;
   padding-block: 4rem;
+  background-color: white;
 }
 .nav__link {
   color: var(--dark);
@@ -261,7 +263,6 @@ body {
   font-size: 1.6rem;
   line-height: 5.1rem;
   white-space: nowrap;
-  opacity: 0;
 }
 .nav__link:hover {
   color: var(--color-red);
@@ -272,14 +273,12 @@ body {
 }
 @media screen and (max-width: 766px) {
   .nav.active {
-    transition: height 0.1s ease-in-out, box-shadow 0.1s 0.1s;
+    transition: height 0.3s 0s ease-in-out, box-shadow 0.3s 0s;
     box-shadow: 0px 7px 5px -5px rgba(0, 0, 0, 0.25);
-  }
-  .nav.active .nav__list {
-    background-color: white;
+    background-color: red;
   }
   .nav.active .nav__link {
-    transition: opacity 0.1s 0.2s;
+    transition: opacity 0.1s 0.4s;
     opacity: 1;
   }
 }
@@ -295,6 +294,7 @@ body {
     display: inline-flex;
     flex-direction: row;
     padding-block: 0;
+    background-color: transparent;
   }
   .nav__link {
     opacity: 1;
@@ -308,13 +308,35 @@ body {
   width: 4rem;
   height: 2.4rem;
   transform: translateY(-3px);
+  position: relative;
 }
-.burger svg line {
+.burger .svgmenu {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  transition: 0.3s 0.3s;
+}
+.burger .svgmenu line {
   stroke-width: 2;
   transition: stroke-width 0.3s;
 }
-.burger svg:hover line {
-  stroke-width: 2;
+.burger .svgmenu:hover line {
+  stroke-width: 1;
+}
+.burger .svgclose {
+  pointer-events: none;
+  opacity: 0;
+  position: absolute;
+  inset: 0;
+  transition: 0.3s 0s;
+}
+.burger.active .svgmenu {
+  opacity: 0;
+  transition: 0.3s 0s;
+}
+.burger.active .svgclose {
+  transition: 0.3s 0.3s;
+  opacity: 1;
 }
 @media screen and (min-width: 767px) {
   .burger {
@@ -1007,6 +1029,21 @@ body {
 .address__call {
   margin-top: 2.4rem;
   text-align: center;
+}
+
+body::-webkit-scrollbar {
+  width: 6px; /* ширина scrollbar */
+  position: fixed;
+}
+
+body::-webkit-scrollbar-track {
+  background: rgb(246, 245, 245); /* цвет дорожки */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: black;
+  border-radius: 20px;
+  border: 1px solid rgb(246, 245, 245);
 }
 
 .footer {

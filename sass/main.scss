@@ -10,6 +10,18 @@
 @use './layout/services';
 @use './layout/prices';
 @use './layout/contacts';
+body::-webkit-scrollbar {
+	width: 6px; /* ширина scrollbar */
+	position: fixed;
+}
+body::-webkit-scrollbar-track {
+	background: rgb(246, 245, 245); /* цвет дорожки */
+}
+body::-webkit-scrollbar-thumb {
+	background-color: black;
+	border-radius: 20px;
+	border: 1px solid rgb(246, 245, 245);
+}
 
 .footer {
 	padding-inline: calc((100% - 1220px) / 2);
