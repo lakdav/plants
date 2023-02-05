@@ -102,11 +102,6 @@ body {
   font-family: var(--inter);
 }
 
-.btn-secondary:hover, .btn-primary:hover {
-  background-color: var(--color-red);
-  color: white;
-}
-
 .btn-secondary, .btn-primary {
   cursor: pointer;
   text-align: center;
@@ -130,6 +125,12 @@ body {
     font-size: var(--button);
   }
 }
+@media (hover: hover) {
+  .btn-primary:hover {
+    background-color: var(--color-red);
+    color: white;
+  }
+}
 .btn-secondary {
   margin-top: 7px;
   color: var(--color-red);
@@ -145,6 +146,12 @@ body {
   align-items: center;
   justify-content: center;
   background-color: transparent;
+}
+@media (hover: hover) {
+  .btn-secondary:hover {
+    background-color: var(--color-red);
+    color: white;
+  }
 }
 .btn-secondary.active {
   background-color: var(--color-red);
@@ -857,6 +864,11 @@ body {
   background-position: bottom center;
   background-size: 26vw;
 }
+@media screen and (max-width: 767px) {
+  .contacts__layout.active {
+    background: none;
+  }
+}
 .contacts__heading {
   text-align: center;
   font-family: var(--inika);
@@ -897,11 +909,13 @@ body {
 }
 
 .ml {
-  margin-left: auto;
+  margin: 0 auto;
 }
-
-.mb {
-  margin-bottom: 4.7rem;
+@media screen and (min-width: 1440px) {
+  .ml {
+    margin: 0;
+    margin-left: auto;
+  }
 }
 
 .dropdown {
@@ -916,8 +930,22 @@ body {
   max-width: 30rem;
   margin-left: auto;
   margin-right: auto;
+  transition: margin 0.3s;
 }
-@media screen and (min-width: 1440px) {
+.dropdown.active {
+  margin-top: -31px;
+}
+@media screen and (min-width: 767px) {
+  .dropdown.active {
+    margin-top: -39px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .dropdown.active {
+    margin-top: 0px;
+  }
+}
+@media screen and (min-width: 1200px) {
   .dropdown {
     margin-right: 0;
   }
@@ -1004,31 +1032,50 @@ body {
 }
 
 .address {
-  width: 44.8rem;
   border: 1px solid #000000;
   border-radius: 20px;
-  padding: 1.7rem 3.3rem 3.2rem;
+  padding: 2.3rem 3.6rem;
+  width: 100%;
 }
 .address p {
   display: flex;
-  align-items: center;
+  padding: 4px 0;
+  gap: 0.5rem;
 }
 .address .field {
   font-size: 16px;
-  line-height: 40px;
+  line-height: 20px;
   letter-spacing: 0.05em;
   color: #000000;
-  min-width: 12.8rem;
+}
+@media screen and (max-width: 767px) {
+  .address .field {
+    max-width: 65px;
+    min-width: 65px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .address .field {
+    min-width: 128px;
+  }
 }
 .address .value {
+  font-weight: 400;
   font-size: 16px;
-  line-height: 40px;
   letter-spacing: 0.05em;
-  color: var(--grey-light);
+  color: #717171;
 }
 .address__call {
   margin-top: 2.4rem;
   text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+#address-output {
+  margin-top: 33px;
+  position: absolute;
+  width: 100%;
 }
 
 body::-webkit-scrollbar {

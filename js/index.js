@@ -29,6 +29,8 @@ window.addEventListener('click', (e) => {
 	}
 });
 
+//==============================================
+
 const accourdions = document.querySelectorAll('.accourdion');
 
 let currentaccourdion = null;
@@ -57,6 +59,8 @@ accourdions.forEach((accourdion) => {
 	});
 });
 
+//==================================================
+
 const dropdown = document.getElementById('dropdown');
 const dropdownToggle = document.getElementById('dropdown-toggle');
 const dropdownPanel = document.getElementById('dropdown-panel');
@@ -76,7 +80,10 @@ dropdownToggle.addEventListener('click', () => {
 
 menuitems.forEach((menuitem) => {
 	menuitem.addEventListener('click', () => {
+		dropdown.classList.add('active');
+		dropdown.parentElement.classList.add('active');
 		dropdownPanel.setAttribute('aria-hidden', true);
+		dropdownToggle.setAttribute('aria-expanded', false);
 		dropdown.style.setProperty('--height', 0);
 		addressOutput.style.display = 'block';
 		labelText.textContent = menuitem.dataset.city;
@@ -96,35 +103,47 @@ menuitems.forEach((menuitem) => {
             <span class="value">${menuitem.dataset.officeadress}</span>
         </p>
         <div class="address__call">
-            <button class="btn-secondary btn-secondary-secondary--small">Call us</button>
+            <a href="tel:${menuitem.dataset.phone}" class="btn-secondary btn-secondary-secondary--small">Call us</a>
         </div>
     </div>`;
 	});
 });
 
+// ===================================
 const filterButtons = document.querySelectorAll('.services__tablist-tab [role="tab"]');
 const services = document.querySelectorAll('.service');
 
-let currentButton = null;
+let currentButton = [];
 
 filterButtons.forEach((btn) => {
 	btn.addEventListener('click', () => {
-		if (currentButton === btn) {
-			return;
+		const exist = currentButton.indexOf(btn);
+		if (exist > -1) {
+			btn.classList.remove('active');
+			btn.setAttribute('aria-selected', false);
+			currentButton = [
+				...currentButton.filter((b) => {
+					return b.dataset.target != btn.dataset.target;
+				}),
+			];
+		} else {
+			if (currentButton.length === 2) return;
+			btn.classList.add('active');
+			btn.setAttribute('aria-selected', true);
+			currentButton.push(btn);
 		}
-		if (currentButton) {
-			currentButton.classList.remove('active');
-			currentButton.setAttribute('aria-selected', false);
-		}
-		btn.classList.add('active');
-		btn.setAttribute('aria-selected', true);
 		services.forEach((service) => {
-			if (service.dataset.tag === btn.dataset.target) {
+			if (currentButton.length === 0) {
 				service.classList.remove('blur');
 			} else {
 				service.classList.add('blur');
 			}
 		});
-		currentButton = btn;
+		services.forEach((service) => {
+			console.log(currentButton.findIndex((btn) => btn.dataset.target === service.dataset.tag));
+			if (currentButton.findIndex((btn) => btn.dataset.target === service.dataset.tag) > -1) {
+				service.classList.remove('blur');
+			}
+		});
 	});
 });
