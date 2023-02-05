@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inika:wght@400;700&family=Inter:wght@300;400;600;700&family=Roboto&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Plants</title>
+</head>
+
+<body>
+    <!-- header -->
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+                <div class="header__logo logo">
+                    <img src="./assets/logo.svg" alt="web site logo">
+                    <span class="logo__text">Plants</span>
+                </div>
+                <button id="burger" class="burger" aria-controls="navigation" aria-expanded="false">
+                    <svg class="svgmenu" width="40" height="26" viewBox="0 0 40 26" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <line y1="1" x2="40" y2="1" stroke="#717171" stroke-width="2" />
+                        <line y1="9" x2="40" y2="9" stroke="#717171" stroke-width="2" />
+                        <line y1="17" x2="40" y2="17" stroke="#717171" stroke-width="2" />
+                        <line y1="25" x2="40" y2="25" stroke="#717171" stroke-width="2" />
+                    </svg>
+                    <svg class="svgclose" width="40" height="26" viewBox="0 0 40 26" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+
+                        <line y1="50%" x2="40" y2="50%" stroke="#717171" transform="rotate(45 20 13)"
+                            stroke-width="2" />
+                        <line y1="50%" x2="40" y2="50%" stroke="#717171" stroke-width="2"
+                            transform="rotate(-45 20 13)" />
+                    </svg>
+                </button>
+                <nav id="navigation" class="header__nav nav" aria-label="primary navigation">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a class="nav__link active" href="#welcome">Home</a></li>
+                        <li class="nav__item"><a class="nav__link" href="#about" about>About us</a></li>
+                        <li class="nav__item"><a class="nav__link" href="#services">Service</a></li>
+                        <li class="nav__item"><a class="nav__link" href="#prices">Price</a></li>
+                        <li class="nav__item"><a class="nav__link" href="#contacts">Contacts</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+
+
+
+
+    <!-- main -->
+    <main class="main">
+        <!-- welcome -->
+        <section id="welcome" class="welcome">
+            <div class="container">
+                <div class="welcome__layout">
+                    <div class="welcome__content">
+                        <h1 class="welcome__heading heading--1">We grow <span class="heading__mark"> plants</span> and
+                            give you
+                            oxygen
+                        </h1>
+                        <div class="welcome__text">Lorem Ipsum is simply dummy text of the printing and typesetting
+                            industry.
+                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</div>
+                        <button class="btn-primary">Learn more</button>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <!-- about -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="about__layout">
+                    <div class="about__content">
+                        <h2 class="about__heading heading--inika">We are <span
+                                class="heading__mark heading__mark--red">professional <br>
+                                experienced</span> gardeners
+                        </h2>
+                        <div class="about__text">Lorem Ipsum is simply dummy text of the printing and typesetting
+                            industry.
+                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                            unknown
+                            printer took a galley of type and scrambled it to make a type specimen book. It has survived
+                            not
+                            only five centuries, but also the leap into electronic typesetting, remaining essentially
+                            unchanged.
+                        </div>
+                    </div>
+                    <div class="about__decor">
+                        <img class="about__decor-img" src="./assets/houseplant.png" alt="houseplant" aria-hidden="true">
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <!-- services -->
+        <section id="services" class="services">
+            <div class="container">
+                <div class="services__layout">
+                    <div class="services__tablist">
+                        <h2 id="services__title" class="services__title">Service and our <br> projects</h2>
+                        <ul class="services__tablist-tabs" aria-controls="tabpanel" role="tablist"
+                            aria-labelledby="services__title">
+                            <li class="services__tablist-tab"><button role="tab" aria-selected="false"
+                                    data-target="garden" class="btn-secondary"
+                                    aria-label="select gardens">Gardens</button></li>
+                            <li class="services__tablist-tab"><button role="tab" aria-selected="false"
+                                    data-target="lawn" class="btn-secondary" aria-label="select lawn">Lawn</button>
+                            </li>
+                            <li class="services__tablist-tab"><button role="tab" aria-selected="false"
+                                    data-target="planting" class="btn-secondary"
+                                    aria-label="select planting">Planting</button></li>
+                        </ul>
+                    </div>
+                    <div class="services__tabpanel" role="tabpanel" id="tabpanel">
+                        <article data-tag="garden" class="service">
+                            <div class="service__image"><img
+                                    srcset="./assets/service1-small.png 280w, ./assets/service-1.png 330w"
+                                    sizes="(min-width: 1440px) 330px, 280px" alt="Garden care"></div>
+                            <h3 class="service__title">Garden care</h3>
+                            <p class="service__text">Lorem Ipsum has been the industry</p>
+                        </article>
+                        <article data-tag="planting" class="service">
+                            <div class="service__image"><img
+                                    srcset="./assets/service2-small.png 280w, ./assets/service-2.png 330w"
+                                    sizes="(min-width: 1440px) 330px, 280px" alt="Garden care"></div>
+                            <h3 class="service__title">Planting</h3>
+                            <p class="service__text">Lorem Ipsum has been the industry</p>
+                        </article>
+                        <article data-tag="lawn" class="service">
+                            <div class="service__image"><img
+                                    srcset="./assets/service3-small.png 280w, ./assets/service-3.png 330w"
+                                    sizes="(min-width: 1440px) 330px, 280px" alt="Garden care"></div>
+                            <h3 class="service__title">Lawn care</h3>
+                            <p class="service__text">Lorem Ipsum has been the industry</p>
+                        </article>
+                        <article data-tag="planting" class="service">
+                            <div class="service__image"><img
+                                    srcset="./assets/service4-small.png 280w, ./assets/service-4.png 330w"
+                                    sizes="(min-width: 1440px) 330px, 280px" alt="Garden care"></div>
+                            <h3 class="service__title">Planting</h3>
+                            <p class="service__text">Lorem Ipsum has been the industry</p>
+                        </article>
+                        <article data-tag="garden" class="service">
+                            <div class="service__image"><img
+                                    srcset="./assets/service5-small.png 280w, ./assets/service-5.png 330w"
+                                    sizes="(min-width: 1440px) 330px, 280px" alt="Garden care"></div>
+                            <h3 class="service__title">Garden care</h3>
+                            <p class="service__text">Lorem Ipsum has been the industry</p>
+                        </article>
+                        <article data-tag="planting" class="service">
+                            <div class="service__image"><img
+                                    srcset="./assets/service6-small.png 280w, ./assets/service-6.png 330w"
+                                    sizes="(min-width: 1440px) 330px, 280px" alt="Garden care"></div>
+                            <h3 class="service__title">Planting</h3>
+                            <p class="service__text">Lorem Ipsum has been the industry</p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- prices -->
+        <section id="prices" class="prices" aria-labelledby="prices__title">
+            <div class="container">
+                <div class="prices__layout">
+                    <h2 id="prices__title" class="prices__title">Prices</h2>
+                    <ul class="prices__accourdions">
+                        <li class="prices__accourdion accourdion"><button class="accourdion__header"
+                                aria-expanded="false" id="accourdion__header-1"
+                                aria-controls="accordion-panel-1">Basics<span><svg>
+                                        <use xlink:href="./assets/arrow.svg#arrow" />
+                                    </svg></span></button>
+                            <div class="accourdion__panel" id="accordion-panel-1" aria-hidden="true">
+                                <p class="accourdion__text">Release of Letraset sheets containing Lorem Ipsum passages,
+                                    and
+                                    more recently</p>
+                                <p class="accourdion__price"><span class="accourdion__price-mark">
+                                        &#36;<span>15</span></span>&nbsp;
+                                    &#47;&nbsp;per hour</p>
+                                <a href="#contacts" class="accourdion__order">Order</a>
+                            </div>
+                        </li>
+
+
+                        <li class="prices__accourdion accourdion"><button class="accourdion__header"
+                                aria-expanded="false" id="accourdion-header-2"
+                                aria-controls="accordion-panel-2">Standard<span><svg>
+                                        <use xlink:href="./assets/arrow.svg#arrow" />
+                                    </svg></span></button>
+                            <div class="accourdion__panel" id="accordion-panel-2" aria-hidden="true">
+                                <p class="accourdion__text">Release of Letraset sheets containing Lorem Ipsum passages,
+                                    and
+                                    more recently</p>
+                                <p class="accourdion__price"><span class="accourdion__price-mark">
+                                        &#36;<span>25</span></span>&nbsp;
+                                    &#47;&nbsp;per hour</p>
+                                <a href="#contacts" class="accourdion__order">Order</a>
+                            </div>
+                        </li>
+                        <li class="prices__accourdion accourdion"><button class="accourdion__header"
+                                aria-expanded="false" id="accourdion-header-3" aria-controls="accordion-panel-3">Pro
+                                care<span><svg>
+                                        <use xlink:href="./assets/arrow.svg#arrow" />
+                                    </svg></span></button>
+                            <div class="accourdion__panel" id="accordion-panel-3" aria-hidden="true">
+                                <p class="accourdion__text">Release of Letraset sheets containing Lorem Ipsum passages,
+                                    and
+                                    more recently</p>
+                                <p class="accourdion__price"><span class="accourdion__price-mark">
+                                        &#36;<span>35</span></span>&nbsp;
+                                    &#47;&nbsp;per hour</p>
+                                <a href="#contacts" class="accourdion__order">Order</a>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="prices__feedback">
+                        <h3 class="prices__heading heading--2">Our best <span class="heading__mark">gardeners</span>
+                            are <br> ready to help you</h3>
+                        <button class="prices__btn btn-secondary">Contact us</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- contacts -->
+
+        <section id="contacts" class="contacts" aria-labelledby="contacts__heading">
+            <div class="container">
+                <div class="contacts__layout">
+                    <h2 id="contacts__heading" class="contacts__heading">Contact us</h2>
+                    <div id="dropdown" class="dropdown">
+                        <button id="dropdown-toggle" class="dropdown__label" aria-controls="dropdown-panel"
+                            aria-labelledby="dropdown__label-text" aria-haspopup="menu" aria-expanded="false">
+                            <span id="dropdown__label-text" class="dropdown__label-text">City</span><span
+                                class="dropdown__label-icon"><svg>
+                                    <use xlink:href="./assets/arrow.svg#arrow" />
+                                </svg></span>
+                        </button>
+                        <div tabindex="0" id="dropdown-panel" class="dropdown__panel" aria-hidden="true">
+                            <ul tabindex="0" class="dropdown__menu" role="menu">
+                                <li role="menuitem" tabindex="0" class="dropdown__menuitem" data-city="Yonkers, NY"
+                                    data-phone="+1 914 678 0003" data-officeadress="511 Warburton Ave">Yonkers, NY</li>
+                                <li role="menuitem" tabindex="0" class="dropdown__menuitem" data-city="Canandaigua, NY"
+                                    data-phone="+1 585 393 0001" data-officeadress="151 Charlotte Street">Canandaigua,
+                                    NY
+                                </li>
+                                <li role="menuitem" tabindex="0" class="dropdown__menuitem" data-city="Sherrill, NY"
+                                    data-phone="+1 315 908 0004" data-officeadress="14 WEST Noyes BLVD">Sherrill, NY
+                                </li>
+                                <li role="menuitem" tabindex="0" class="dropdown__menuitem" data-city="New York City"
+                                    data-phone="+1 212 456 0002" data-officeadress="9 East 91st Street">New York City
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="address-output"></div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="copyright"><span>&copy;</span><span>2022</span><a href="https://github.com/lakdav"
+                target="_parent">github</a></div>
+        <a href="https://rs.school/js-stage0/" target="_blank">Rolling Scopes School</a>
+        <ul class="social">
+            <li><a href="#!"><img src="./assets/inst.svg" alt="inst"></a></li>
+            <li><a href="#!"><img src="./assets/fb.svg" alt="facebook"></a></li>
+            <li><a href="#!"><img src="./assets/tw.svg" alt="twitter"></a></li>
+            <li><a href="#!"><img src="./assets/pinterest.svg" alt="pinterest"></a></li>
+        </ul>
+    </footer>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
